@@ -5,11 +5,6 @@ const ciudad = $form.ciudad.value;
 const comportamiento = $form.comportamiento.value;
 const descripcionRegalo = $form["descripcion-regalo"].value;
 
-console.log(nombreUsuario);
-console.log(ciudad);
-console.log(comportamiento);
-console.log(descripcionRegalo);
-
 function validarNombre(nombre) {
     if (nombre.length === 0) {
         return "Este campo debe tener al menos 1 caracter";
@@ -21,3 +16,19 @@ function validarNombre(nombre) {
 
     return "";
 }
+
+function verValoresDeLaCarta() {
+    const nombreUsuario = $form.nombre.value;
+    const ciudad = $form.ciudad.value;
+    const comportamiento = $form.comportamiento.value;
+    const descripcionRegalo = $form["descripcion-regalo"].value;
+
+    console.log(nombreUsuario);
+    console.log(ciudad);
+    console.log(comportamiento);
+    console.log(descripcionRegalo);
+
+    event.preventDefault();
+}
+
+$form.onsubmit = verValoresDeLaCarta;
